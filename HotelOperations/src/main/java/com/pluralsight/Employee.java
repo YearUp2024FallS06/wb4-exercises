@@ -31,9 +31,7 @@ public class Employee {
 
     public float getRegularHours(){
         return (hoursWorked > 40) ? 40 : hoursWorked;
-
     }
-
 
     public float getOvertimeHours(){
         return (hoursWorked > 40 ) ? hoursWorked - 40 : 0 ;
