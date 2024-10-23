@@ -2,6 +2,13 @@ package com.pluralsight;
 
 public class Main {
     public static void main(String[] args) {
+
+
+        Widget w = new Widget("blue");
+        w.DoSomething();
+
+
+
         System.out.println("Hello world!");
 
 

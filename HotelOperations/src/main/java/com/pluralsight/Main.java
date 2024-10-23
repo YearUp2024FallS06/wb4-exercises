@@ -1,5 +1,7 @@
 package com.pluralsight;
 
+import javax.sound.midi.Soundbank;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
@@ -11,5 +13,16 @@ public class Main {
         System.out.println(e1.getRegularHours());
         System.out.println(e1.getOvertimeHours());
 
+
+
+        Reservation r = new Reservation("king", 2, true);
+
+        r.setNumberOfNights(3);
+
+        Reservation[] myReservations = r.getReservationsOnDate();
+
     }
+
+
+
 }
