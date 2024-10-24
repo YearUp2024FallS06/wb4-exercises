@@ -34,4 +34,23 @@ public class BlackJackGame {
     }
 
 
+    public Deck getDeck() {
+        return deck;
+    }
+
+    public ArrayList<Player> getPlayers() {
+        return  players;
+    }
+
+    public Player getDealer() {
+        return dealer;
+    }
+
+    public Player[] getWinners(){
+        //look through all the player, figure out the one
+        // with the highest score that is NOT above 21, call them out.
+        return null;
+    }
+
+
 }

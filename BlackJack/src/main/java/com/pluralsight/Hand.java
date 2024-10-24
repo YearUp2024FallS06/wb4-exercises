@@ -51,8 +51,6 @@ public class Hand {
         return sb.toString();
     }
 
-    public void DisplayHand() throws Exception {
 
-    }
 
 }
