@@ -10,8 +10,8 @@ public class Deck {
     public Deck(){
         cards = new ArrayList<>();
         String[] suits = {"Hearts","Spades","Diamonds","Clubs"};
-        String[] values = {"2","3","4","5","6","7","8",
-                "9","10","J","Q","K","A"};
+        String[] values = {"A", "2","3","4","5","6","7","8",
+                "9","10","J","Q","K"};
 
         // these loops create all the cards in the deck
         // and add them to the ArrayList
@@ -23,7 +23,7 @@ public class Deck {
         }
     }
 
-    public void suffle(){
+    public void shuffle(){
         Collections.shuffle(cards);
     }
 
