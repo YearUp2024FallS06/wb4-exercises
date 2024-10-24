@@ -1,44 +1,34 @@
 package com.pluralsight;
 
 public class Main {
+
+
+    private static BlackJackGame game;
+
     public static void main(String[] args) throws Exception {
 
+        game = new BlackJackGame();
 
         System.out.println("Welcome to Blackjack!");
-        String player1Name = Console.PromptForString("Player 1, enter your name: ");
 
-        System.out.println("Dealing cards... 2 cards to each player!");
+        int numberOfPlayers = Console.PromptForInt("How many players (not including the dealer):");
 
-        Deck deck = new Deck();
-        deck.shuffle();
+        AddPlayersToGame(numberOfPlayers);
 
-
-        Hand dealerHand = new Hand();
-        dealerHand.Deal(deck.deal());
-        dealerHand.Deal(deck.deal());
+        game.DealCards();
 
 
-        Hand player1Hand = new Hand();
-        player1Hand.Deal(deck.deal());
-        player1Hand.Deal(deck.deal());
 
 
-//show the cards!
-        System.out.println("The dealer hand is:");
-        dealerHand.DisplayHand();
-
-        System.out.println(player1Name + "'s hand is:");
-        player1Hand.DisplayHand();
-
-        if(dealerHand.getValue() == player1Hand.getValue()){
-            System.out.println("It's a TIE!");
-        }
-        else if(dealerHand.getValue() > player1Hand.getValue()){
-            System.out.println("Dealer wins!");
-        }
-        else{
-            System.out.println(player1Name + " wins!");
-        }
 
     }
+
+    public static void AddPlayersToGame(int numberOfPlayers){
+        for (int i = 1 ; i <= numberOfPlayers ; i++){
+            String playerName = Console.PromptForString("Please enter the name of player " + i + ": ");
+            game.AddPlayer(playerName);
+        }
+    }
+
+
 }
